@@ -1,0 +1,37 @@
+import pandas as pd
+import numpy as np 
+
+# Loading Excel file 
+data = pd.read_excel(r'C:\Users\Veronica\Desktop\EC2B1 Indonesia\pwt100.xlsx', sheet_name=2, header = 0)
+
+# Filtering data
+print(data.head())
+filtered_data = data[data['countrycode'] == 'IDN']
+filtered_data = filtered_data[['year', 'rgdpna', 'pop']]
+filtered_data = filtered_data.dropna()  
+print(filtered_data.head())
+
+# Calculating log of GDP and log of GDP per capita 
+filtered_data['log_gdp'] = np.log(filtered_data['rgdpna'])
+filtered_data['log_gdp_per_capita'] = np.log(filtered_data['rgdpna'] / filtered_data['pop'])
+print(filtered_data.head())
+
+# Plotting the data
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+import openpyxl
+print(openpyxl.__version__)
+
+sns.set_theme('talk', style = 'white')
+plt.scatter(filtered_data['year'], filtered_data['log_gdp'])
+plt.xlabel('Year')
+plt.ylabel('ln(real GDP)')
+plt.title('real GDP in Indonesia from 1960 to 2019')    
+plt.show()  
+
+plt.scatter(filtered_data['year'], filtered_data['log_gdp_per_capita'])
+plt.xlabel('Year')
+plt.ylabel('ln(real GDP per capita)')
+plt.title('real GDP per capita in Indonesia from 1960 to 2019')    
+plt.show() 
