@@ -1,17 +1,33 @@
-# **Indonesia Case Study 🇮🇩**
+# **Indonesia Growth Analysis: Solow and Romer Perspectives** 
 
 ![alt text](images/indonesia.webp)
 
-Our research examines Indonesia’s **long-term economic development** by focusing on the roles of **capital accumulation**, **saving**, **population growth**, and **research and development**. Institutional and cultural factors, though potentially important, are not considered in this analysis to maintain a clear focus on these key economic drivers.
+This project explores Indonesia’s long-run economic development through the lens of the Solow and Romer growth models. It focuses on key macroeconomic drivers—capital accumulation, savings, population growth, and research & development—while abstracting from institutional and cultural variables to maintain clarity.
 
-This notebook serves as the coding part of the project, aiming to answer key questions related to **Indonesia's economic development** using provided data. It includes:
+## 📌 Project Focus
 
-1. **Trend Calculation**: Analyses the trends for the natural logarithms of real GDP and real GDP per capita at constant 2017 national prices, with robustness checks using levels instead of log levels.
+The notebook addresses core questions about Indonesia's growth dynamics using empirical data and economic theory. It includes:
 
-2. **Total Factor Productivity (TFP) Measure**: Derives TFP using a production function, considering real GDP, the number of employed workers, and the capital stock, while testing robustness with alternative values for the production parameter alpha.
+- **Trend Calculation**: Tracks the evolution of real GDP and real GDP per capita (in natural logs), with robustness checks using levels instead.
+- **Total Factor Productivity (TFP)**: Estimates TFP using a production function and explores sensitivity to different assumptions about capital share (α).
+- **Growth Accounting**: Decomposes GDP growth into contributions from labour, capital, and TFP over the long run.
+- **Labour Productivity**: Constructs GDP per worker metrics to assess productivity growth over time.
 
-3. **Growth Accounting**: Breaks down the contributions of input variables to changes in GDP, focusing on long-run developments rather than yearly averages.
+> This notebook was created as part of an academic project and serves as the coding component for analysing Indonesia's macroeconomic development.
 
-4. **Labour Productivity**: Constructs a series for GDP per worker to study labour productivity trends.
+## 🛠 Technologies Used
+
+- Python  
+- `pandas`, `numpy` – Data manipulation  
+- `matplotlib`, `seaborn` – Visualisation  
+- `openpyxl` – Excel file handling  
+- Custom module: `get_regression_coefs_general.py` for trend estimation
+
+## 📂 Repository
+
+All files and data are available here:  
+🔗 [GitHub Repository](https://github.com/ec2b1-case-study/growth-analysis-indonesia/tree/main)
+
+---
 
 
