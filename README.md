@@ -15,7 +15,7 @@ The notebook addresses core questions about Indonesia's growth dynamics using em
 
 > This notebook was created as part of an academic project and serves as the coding component for analysing Indonesia's macroeconomic development.
 
-## 🛠 Technologies Used
+## 🛠 Programmes Used
 
 - Python  
 - `pandas`, `numpy` – Data manipulation  
